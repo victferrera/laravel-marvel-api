@@ -13,8 +13,8 @@ class MarvelApiControlador extends Controller
         $data = new DateTime();
         $timestamp = $data->getTimestamp();
 
-        $chavePrivada = '';
-        $chavePublica = '';
+        $chavePrivada = '2292698d73b4bc4b46f1bce177dc93325dfe04a9';
+        $chavePublica = '36985449538c72530e35cf3a6d4b4064';
         $chavePrivadaPublica = $chavePrivada.$chavePublica;
 
         $chavePrivadaPublicaComTimestamp = $timestamp.$chavePrivadaPublica;
