@@ -7,6 +7,7 @@ O objetivo desse projeto é criar uma aplicação utilizando o Framework Laravel
 [Laravel](https://laravel.com/)
 [Docker](https://www.docker.com/)
 [Marvel API](https://developer.marvel.com/)
+[Laradock](https://laradock.io/)
 ***
 ## Resultados
 As seguintes funções foram implantadas
