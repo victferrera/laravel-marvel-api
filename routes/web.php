@@ -14,4 +14,5 @@ use App\Http\Controllers\MarvelApiControlador;
 |
 */
 
-Route::get('/teste', [MarvelApiControlador::class, 'callApi'])->name('callApi');
+Route::get('/heroi/{nome?}', [MarvelApiControlador::class, 'callApi'])->name('callApi');
+Route::get('/pesquisa',[MarvelApiControlador::class, 'pesquisa'])->name('pesquisa');

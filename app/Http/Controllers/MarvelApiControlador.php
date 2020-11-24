@@ -7,14 +7,14 @@ use DateTime;
 
 class MarvelApiControlador extends Controller
 {
-    public function callApi()
+    public function callApi(Request $nome)
     {
 
         $data = new DateTime();
         $timestamp = $data->getTimestamp();
 
-        $chavePrivada = '';
-        $chavePublica = '';
+        $chavePrivada = '2292698d73b4bc4b46f1bce177dc93325dfe04a9';
+        $chavePublica = '36985449538c72530e35cf3a6d4b4064';
         $chavePrivadaPublica = $chavePrivada.$chavePublica;
 
         $chavePrivadaPublicaComTimestamp = $timestamp.$chavePrivadaPublica;
@@ -23,7 +23,7 @@ class MarvelApiControlador extends Controller
 
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, "http://gateway.marvel.com:80/v1/public/characters?ts=$timestamp&apikey=$chavePublica&hash=$chaveMd5&name=wolverine");
+        curl_setopt($ch, CURLOPT_URL, "http://gateway.marvel.com:80/v1/public/characters?ts=$timestamp&apikey=$chavePublica&hash=$chaveMd5&name=$nome->nomeHeroi");
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
@@ -35,11 +35,14 @@ class MarvelApiControlador extends Controller
         $saida = curl_exec($ch) or die(curl_error());
 
         curl_close($ch);
-
+        
         return view('mostrarDadosHeroi')->with('json', json_decode($saida));
 
-        
+    }
 
+    public function pesquisa()
+    {
+        return view('inicio.pesquisa');
     }
 
 }
