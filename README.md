@@ -17,9 +17,9 @@ As seguintes funções foram implantadas
 ***
 ## Rotas
 * /pesquisa
-Descrição: abre a tela para digitar o nome do Herói.
-* //heroi/{nome?}
-Descrição: para realizar a busca através da API.
+** Descrição: abre a tela para digitar o nome do Herói.
+* /heroi/{nome?}
+** Descrição: para realizar a busca através da API.
 
 
 
