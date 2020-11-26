@@ -13,12 +13,13 @@ O objetivo desse projeto é criar uma aplicação utilizando o Framework Laravel
 As seguintes funções foram implantadas
 - [X] Criar controlador para comunicação com a API
 - [X] Receber dados da api via json e mostrar na view
-- [X] Criar página simples para pesquisar o nome
+- [X] Criar página para pesquisar o nome
 ***
-## A fazer
-Tarefas a fazer para melhoria do projeto
-- [ ] Corrigir bug da pesquisa com nomes compostos, ex: "ghost rider".
-- [ ] Melhorar a tela para apresentação dos dados e pesquisa do herói.
+## Rotas
+* /pesquisa
+Descrição: abre a tela para digitar o nome do Herói.
+* //heroi/{nome?}
+Descrição: para realizar a busca através da API.
 
 
 
